@@ -27,14 +27,56 @@
             </div>
             <br>
             <button type="button" class="btn btn-light">Errands</button>
-            <button type="button" class="btn btn-light">Modify</button>
-            <button type="button" class="btn btn-danger">Leave</button>
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#Pop_Modal_Modify">Modify</button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Pop_Modal_Leave">Leave</button>
         </div>
         <div class="col-4"></div>
     </div>
 
+    <!-- PopUp Modify -->
+    <div class="modal fade" id="Pop_Modal_Modify" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modify</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Do you want to move down the Queue?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" name="search" id="search-but" onclick="loadStatusPage()" >Yes</button>
 
-    
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PopUp Leave -->
+    <div class="modal fade" id="Pop_Modal_Leave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Leave the Queue</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to LEAVE the waiting room?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" name="search" id="search-but" onclick="loadStatusPage()" >Yes</button>
+
+            </div>
+            </div>
+        </div>
+    </div>
+
     
 
 </body>
