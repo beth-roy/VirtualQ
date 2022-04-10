@@ -6,6 +6,9 @@
 		width: 130px;
 		margin: 10px;
 	}
+    .card{
+        margin: 20px;
+    }
 
 #help{
 	font-size: 200%;
@@ -70,9 +73,11 @@
 	}
 
 	.wrapper-but{
-		display: flex;
-		justify-content: space-between;
+
 		margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
 	}
 

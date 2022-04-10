@@ -5,7 +5,9 @@
     height: 100px;
 }
 
-
+.card{
+    margin: 20px;
+}
 .btn{
         height: 40px;
         width: 200px;
