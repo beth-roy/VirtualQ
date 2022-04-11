@@ -4,3 +4,7 @@ let loadStatusPage =  () => {
 let loadErrandsPage =  () => {   
     window.location.href='./Errands.html'
 }
+
+let backErrandsPage = () => {
+    window.location.href='./Errands.html'
+}
