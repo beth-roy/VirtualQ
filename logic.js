@@ -12,3 +12,7 @@ let backErrandsPage = () => {
 let cafePage = () => {
     window.location.href='./search_result.html'
 }
+
+let loadHomePage =  () => {   
+    window.location.href='./index.html'
+}
