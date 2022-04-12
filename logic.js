@@ -8,3 +8,7 @@ let loadErrandsPage =  () => {
 let backErrandsPage = () => {
     window.location.href='./Errands.html'
 }
+
+let cafePage = () => {
+    window.location.href='./search_result.html'
+}
