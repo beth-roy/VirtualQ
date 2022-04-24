@@ -158,6 +158,7 @@
       let queryString = new URLSearchParams(paramString);
       console.log(paramString);
       let keyword = paramString;
+      let d = {};
 
       var requestOptions = {
         method: "GET",
@@ -173,14 +174,39 @@
         keyword +
         "&radius=15000&language=en";
 
-      fetch(url, requestOptions)
-        .then((response) => {
-          data = response.json();
-          console.log(data);
-          console.log(data.results);
-        })
-        .then((result) => console.log(results))
-        .catch((error) => console.log("error", error));
+      /* fetch(url, requestOptions)
+        .then((response) => response.json())
+        .then((results) => {
+          console.log("res", results);
+          d = results;
+        });
+
+      console.log("arr", d);*/
+
+      let data = [];
+
+      async function getRandomUser() {
+        // gets the response from the api and put it inside a constant
+        const response = await fetch(url, requestOptions);
+        //the response have to be converted to json type file, so it can be used
+        const data = await response.json();
+        //the addData adds the object "data" to an array
+        addData(data);
+      }
+
+      function addData(object) {
+        // the push method add a new item to an array
+        // here it will be adding the object from the function getRandomUser each time it is called
+        data.push(object);
+        //the fetched data is available only on this scope
+        console.log("This is the value of date inside the function addData:");
+        console.log(data.length());
+      }
+
+      getRandomUser();
+
+      console.log("This is the value of data outside the scope");
+      console.log(data);
     </script>
   </body>
 </html>
