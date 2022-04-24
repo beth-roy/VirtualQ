@@ -2,211 +2,289 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+
+    <title>ESoSearch</title>
+
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      type="text/css"
+      media="screen and (max-width: 768px)"
+      href="portrait.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen and (min-width: 769px)"
+      href="desktop.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script type="text/javascript" src="./logic.js"></script>
-    <link rel="stylesheet" href="search_result.css" />
-    <title>Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a
-        class="navbar-brand"
-        href="#"
-        onclick="backErrandsPage()"
-        style="font-size: 30px"
-        ><ion-icon name="arrow-back-outline" style="font-size: 20px"></ion-icon
-        >Search</a
-      >
-    </nav>
-    <br /><br />
-    <!-- src="https://thisisreno.com/wp-content/uploads/2022/03/Cafe-Con-Papi-3-21-22-Eric-Marks6475-Edit-scaled.jpg"  -->
-
-    <div class="card">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-5">
-            <img
-              src="https://thisisreno.com/wp-content/uploads/2022/03/Cafe-Con-Papi-3-21-22-Eric-Marks6475-Edit-scaled.jpg"
-              alt=""
-              width="100%"
-            />
-          </div>
-          <div class="col-7">
-            <h5 class="card-title">Cafe 1</h5>
-            <p>
-              1 Mile <br />
-              15 mins
-            </p>
+    <div class="icon-wrapper">
+      <i class="fa fa-home" id="home"></i>
+      <i class="fa fa-question-circle" id="help"></i>
+    </div>
+    <div class="wrapper">
+      <div id="result-cards">
+        <label id="query-results">Results for</label>
+        <div class="search-results">
+          <input
+            type="text"
+            id="search-query-results"
+            name="search-query"
+            placeholder="Type something like Yoga, Chess, or ..."
+            value="Senior Swimming Class"
+          />
+          <button
+            type="button"
+            class="btn btn-primary"
+            name="search"
+            id="change-but"
+          >
+            Search
+          </button>
+        </div>
+        <div class="result-card" id="result0">
+          <h4 class="title"></h4>
+          <p class="description"></p>
+          <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
-      </div>
-
-      <div class="card-body">
-        <div class="row">
-          <div class="col-5">
-            <img
-              src="https://thisisreno.com/wp-content/uploads/2022/03/Cafe-Con-Papi-3-21-22-Eric-Marks6475-Edit-scaled.jpg"
-              alt=""
-              width="100%"
-            />
-          </div>
-          <div class="col-7">
-            <h5 class="card-title">Cafe 2</h5>
-            <p>
-              1.3 Mile <br />
-              22 mins
-            </p>
+        <div class="result-card" id="result1">
+          <h4 class="title"></h4>
+          <p class="description"></p>
+          <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
-      </div>
-
-      <div class="card-body">
-        <div class="row">
-          <div class="col-5">
-            <img
-              src="https://thisisreno.com/wp-content/uploads/2022/03/Cafe-Con-Papi-3-21-22-Eric-Marks6475-Edit-scaled.jpg"
-              alt=""
-              width="100%"
-            />
-          </div>
-          <div class="col-7">
-            <h5 class="card-title">Cafe 1</h5>
-            <p>
-              1.8 Mile <br />
-              25 mins
-            </p>
+        <div class="result-card" id="result2">
+          <h4 class="title"></h4>
+          <p class="description"></p>
+          <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
-      </div>
-
-      <div class="card-body">
-        <div class="row">
-          <div class="col-5">
-            <img
-              src="https://thisisreno.com/wp-content/uploads/2022/03/Cafe-Con-Papi-3-21-22-Eric-Marks6475-Edit-scaled.jpg"
-              alt=""
-              width="100%"
-            />
-          </div>
-          <div class="col-7">
-            <h5 class="card-title">Cafe 1</h5>
-            <p>
-              1.8 Mile <br />
-              25 mins
-            </p>
+        <div class="result-card" id="result3">
+          <h4 class="title"></h4>
+          <p class="description"></p>
+          <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
-      </div>
-
-      <div class="card-body">
-        <div class="row">
-          <div class="col-5">
-            <img
-              src="https://thisisreno.com/wp-content/uploads/2022/03/Cafe-Con-Papi-3-21-22-Eric-Marks6475-Edit-scaled.jpg"
-              alt=""
-              width="100%"
-            />
+        <div class="more" id="more" style="display: none">
+          <div class="result-card" id="result4">
+            <h4 class="title"></h4>
+            <p class="description"></p>
+            <div class="lds-roller">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
-          <div class="col-7">
-            <h5 class="card-title">Cafe 1</h5>
-            <p>
-              1.8 Mile <br />
-              25 mins
-            </p>
+          <div class="result-card" id="result5">
+            <h4 class="title"></h4>
+            <p class="description"></p>
+            <div class="lds-roller">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
+          <div class="result-card" id="result6">
+            <h4 class="title"></h4>
+            <p class="description"></p>
+            <div class="lds-roller">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center">
+          <button
+            type="button"
+            class="btn btn-primary"
+            name="show-more"
+            id="show-more"
+            onclick="showMore()"
+            value="Show More"
+          >
+            Show More
+          </button>
         </div>
       </div>
     </div>
-    <div class="footer">15 Minutes left</div>
-
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-    <script>
-      var currentURL = window.location.href;
-      let paramString = currentURL.split("?")[1];
-      paramString = paramString.split("=")[1];
-      let queryString = new URLSearchParams(paramString);
-      console.log(paramString);
-      let keyword = paramString;
-      let d = {};
-
-      var requestOptions = {
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Host": "trueway-places.p.rapidapi.com",
-          "X-RapidAPI-Key":
-            "7eafd80c52msha2ea8a2652f120cp13a8cbjsna3892dbdf5ef",
-        },
-      };
-
-      url =
-        "https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=41.8662653%2C-87.6679668&type=" +
-        keyword +
-        "&radius=15000&language=en";
-
-      /* fetch(url, requestOptions)
-        .then((response) => response.json())
-        .then((results) => {
-          console.log("res", results);
-          d = results;
-        });
-
-      console.log("arr", d);*/
-
-      let data = [];
-
-      async function getRandomUser() {
-        // gets the response from the api and put it inside a constant
-        const response = await fetch(url, requestOptions);
-        //the response have to be converted to json type file, so it can be used
-        const data = await response.json();
-        //the addData adds the object "data" to an array
-        addData(data);
-      }
-
-      function addData(object) {
-        // the push method add a new item to an array
-        // here it will be adding the object from the function getRandomUser each time it is called
-        data.push(object);
-        //the fetched data is available only on this scope
-        console.log("This is the value of date inside the function addData:");
-        console.log(data.length());
-      }
-
-      getRandomUser();
-
-      console.log("This is the value of data outside the scope");
-      console.log(data);
-    </script>
+    <div class="foot"></div>
   </body>
 </html>
+
+<script>
+  var currentURL = window.location.href;
+  let paramString = currentURL.split("?")[1];
+  paramString = paramString.split("=")[1];
+  let queryString = new URLSearchParams(paramString);
+  console.log(paramString);
+  let keyword = paramString;
+  let d = {};
+
+  var requestOptions = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Host": "trueway-places.p.rapidapi.com",
+      "X-RapidAPI-Key": "7eafd80c52msha2ea8a2652f120cp13a8cbjsna3892dbdf5ef",
+    },
+  };
+
+  url =
+    "https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=41.8662653%2C-87.6679668&type=" +
+    keyword +
+    "&radius=15000&language=en";
+
+  const getEvents = () => {
+    fetch(url, requestOptions)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        events = data["results"];
+        console.log(events);
+        for (var i in events) {
+          if (events[i]["name"] == null) {
+            events[i]["name"] =
+              "No Description Available. Click on this event to see more details";
+          }
+          if (document.getElementById("result" + i) != null) {
+            card_elements = document.getElementById("result" + i).children;
+            card_elements[0].innerHTML = events[i]["name"];
+            card_elements[1].innerHTML = events[i]["distance"] + " Meters";
+            card_elements[2].innerHTML = events[i]["distance"];
+            var urlTag = document.createElement("a");
+            urlTag.setAttribute("href", events[i]["name"]);
+            urlTag.setAttribute("class", "stretched-link");
+            urlTag.setAttribute("target", "_blank");
+            document.getElementById("result" + i).appendChild(urlTag);
+          }
+        }
+      });
+  };
+
+  function showMore() {
+    var moreResults = document.getElementById("more");
+    var showMoreButton = document.getElementById("show-more");
+    if (moreResults.style.display === "none") {
+      moreResults.style.display = "block";
+      showMoreButton.innerHTML = "Show Less";
+    } else {
+      moreResults.style.display = "none";
+      showMoreButton.innerHTML = "Show More";
+    }
+  }
+
+  getEvents();
+  document.getElementById("search-query-results").value = searchQuery;
+
+  $("#home").click(function () {
+    window.location.href = "./index.html";
+  });
+
+  $(".result-card").hover(function () {
+    $(this).css("box-shadow", "0 6px 20px 0 rgba(0, 0, 0, 0.19)");
+  });
+
+  $(".result-card").mouseleave(function () {
+    $(this).css("box-shadow", "0 4px 8px 0 rgba(0, 0, 0, 0.2)");
+  });
+
+  $(".result-card").click(function (e) {
+    e.preventDefault();
+    window.open($(this).find("a").attr("href"));
+  });
+
+  $("#change-but").click(function () {
+    var query = document.getElementById("search-query-results").value;
+    window.location.href =
+      "./Results.html?query=" + query + "&location=" + apiLocationString;
+  });
+
+  $("#help").hover(function () {
+    this.style.color = "#696969";
+  });
+  $("#help").mouseleave(function () {
+    this.style.color = "#DCDCDC";
+  });
+  $("#home").hover(function () {
+    this.style.color = "#696969";
+  });
+  $("#home").mouseleave(function () {
+    this.style.color = "#DCDCDC";
+  });
+</script>
