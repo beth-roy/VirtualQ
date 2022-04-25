@@ -193,7 +193,13 @@
             card_elements[1].innerHTML = events[i]["distance"] + " Meters Away";
             card_elements[2].innerHTML = events[i]["address"];
             var urlTag = document.createElement("a");
-            urlTag.setAttribute("href", "google.com");
+            urlTag.setAttribute(
+              "href",
+              "https://www.google.com/maps/search/?api=1&query=" +
+                events[i]["location"]["lat"] +
+                "%2C" +
+                events[i]["location"]["lng"]
+            );
             urlTag.setAttribute("class", "stretched-link");
             urlTag.setAttribute("target", "_blank");
             document.getElementById("result" + i).appendChild(urlTag);
