@@ -1,62 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen and (max-width: 768px)"
-      href="css/portrait.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen and (min-width: 769px)"
-      href="css/desktop.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/errands.css" />
-    <script type="text/javascript" src="js/logic.js"></script>
-    <script
-      src="https://kit.fontawesome.com/31326c43bf.js"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <body>
-    <div
-      class="mainBody"
-      style="background-color: #ffffff; margin-bottom: 70px"
-    >
-      <div
-        class="navbar"
-        style="
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="css/portrait.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 769px)" href="css/desktop.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="css/errands.css" />
+  <script type="text/javascript" src="js/logic.js"></script>
+  <script src="https://kit.fontawesome.com/31326c43bf.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <div class="mainBody" style="background-color: #ffffff; margin-bottom: 70px">
+    <div class="navbar" style="
           width: 100%;
           padding: 0 0 0 25%;
           position: fixed;
@@ -64,46 +35,33 @@
           top: 0;
           height: 60px;
           text-align: center;
-        "
-      >
-        <a style="color: white">45 mins Remaining</a>
-      </div>
-      <br />
-      <br />
-      <div class="wrapper">
-        <form id="search-bar">
-          <input
-            type="text"
-            id="search-query"
-            name="search-query"
-            placeholder="What would you like to do?"
-            style="height: 90px"
-          />
+        ">
+      <a style="color: white">45 mins Remaining</a>
+    </div>
+    <br />
+    <br />
+    <div class="wrapper">
+      <form id="search-bar">
+        <input type="text" id="search-query" name="search-query" placeholder="What would you like to do?"
+          style="height: 90px" />
 
-          <div class="wrapper-but">
-            <button
-              type="button"
-              class="btn btn-primary"
-              name="search"
-              onclick="cafePage()"
-              id="search-but"
-            >
-              Search
-            </button>
-          </div>
-        </form>
-      </div>
-      <h1 style="margin-left: 20px; margin-top: 10px">Our suggestions</h1>
-      <div class="card-deck">
-        <div class="card cards">
-          <a href="#" onclick="cafePage()" style="color: black">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-4" style="">
-                  <img
-                    src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg"
-                    alt=""
-                    style="
+        <div class="wrapper-but">
+          <button type="button" class="btn btn-primary" name="search" onclick="cafePage()" id="search-but">
+            Search
+          </button>
+        </div>
+      </form>
+    </div>
+    <h1 style="margin-left: 20px; margin-top: 10px">Our suggestions</h1>
+    <div class="card-deck">
+      <div class="card cards">
+        <a href="#" onclick="cafePage()" style="color: black">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-4" style="">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg"
+                  alt="" style="
                       margin: 0;
                       position: absolute;
                       top: 50%;
@@ -113,29 +71,54 @@
                       width: 100%;
                       height: auto;
                       text-align: center;
-                    "
-                  />
+                    " />
+              </div>
+              <div class="col-8">
+                <h5 class="card-title">Cafe</h5>
+                <p class="card-text">
+                  Do you wanna grab a cup of coffee from a nearby cafe?
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="card cards">
+        <div class="card-body">
+          <a href="#" onclick="gasPage()" style="color: black">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <img src="https://images.emojiterra.com/google/noto-emoji/v2.034/128px/26fd.png" alt="" style="
+                        margin: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                        height: auto;
+                        text-align: center;
+                      " />
                 </div>
                 <div class="col-8">
-                  <h5 class="card-title">Cafe</h5>
+                  <h5 class="gas-card-title">Gas station</h5>
                   <p class="card-text">
-                    Do you wanna grab a cup of coffee from a nearby cafe?
+                    Would you be interested in filling fuel in your car?
                   </p>
                 </div>
               </div>
             </div>
           </a>
         </div>
-        <div class="card cards">
-          <div class="card-body">
-            <a href="#" onclick="gasPage()" style="color: black">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-4">
-                    <img
-                      src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg"
-                      alt=""
-                      style="
+      </div>
+      <div class="card cards">
+        <div class="card-body">
+          <a href="#" onclick="libraryPage()" style="color: black">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Open_book_nae_02.svg/750px-Open_book_nae_02.svg.png" alt="" style="
                         margin: 0;
                         position: absolute;
                         top: 50%;
@@ -145,61 +128,62 @@
                         width: 100%;
                         height: auto;
                         text-align: center;
-                      "
-                    />
-                  </div>
-                  <div class="col-8">
-                    <h5 class="gas-card-title">Gas station</h5>
-                    <p class="card-text">
-                      Would you be interested in filling fuel in your car?
-                    </p>
-                  </div>
+                      " />
+                </div>
+                <div class="col-8">
+                  <h5 class="card-title">Library</h5>
+                  <p class="card-text">
+                    Would you like to spend some time at a Library?
+                  </p>
                 </div>
               </div>
-            </a>
-          </div>
-        </div>
-        <div class="card cards">
-          <div class="card-body">
-            <a href="#" onclick="libraryPage()" style="color: black">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-4">
-                    <img
-                      src="https://static.vecteezy.com/system/resources/previews/002/412/377/original/coffee-cup-logo-coffee-shop-icon-design-free-vector.jpg"
-                      alt=""
-                      style="
-                        margin: 0;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        -ms-transform: translate(-50%, -50%);
-                        transform: translate(-50%, -50%);
-                        width: 100%;
-                        height: auto;
-                        text-align: center;
-                      "
-                    />
-                  </div>
-                  <div class="col-8">
-                    <h5 class="card-title">Library</h5>
-                    <p class="card-text">
-                      Would you like to spend some time at a Library?
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-    <div class="navbar" style="position: fixed; left: 0; bottom: 0">
-      <a href="status.html" width="25" height="25"
-        ><i class="fa-solid fa-house"></i
-      ></a>
-      <a href="Errands.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-      <a href="leave.html"><i class="fa-solid fa-xmark"></i></a>
+  </div>
+  <div class="navbar" style="position: fixed; left: 0; bottom: 0">
+    <a href="status.html" width="25" height="25"><i class="fa-solid fa-house"></i></a>
+    <a href="Errands.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <a data-toggle="modal" data-target="#Pop_Modal_Leave"><i class="bi bi-box-arrow-left fa-lg" style="color: white;"></i></a>
+    <!-- <div class="wrapper-but">
+      <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#Pop_Modal_Leave"
+        style="width: 50%;">
+
+
+        <i class="fa-solid fa-xmark">
+      </button>
+    </div> -->
+  </div>
+
+
+
+  <div class="modal fade" id="Pop_Modal_Leave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Leave the Queue</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to LEAVE the waiting room?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            No
+          </button>
+          <button type="button" class="btn btn-primary" name="search" id="search-but" onclick="loadHomePage()">
+            Yes
+          </button>
+        </div>
+      </div>
     </div>
-  </body>
+  </div>
+
+</body>
+
 </html>
