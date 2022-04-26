@@ -1,119 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen and (max-width: 768px)"
-      href="css/portrait.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen and (min-width: 769px)"
-      href="css/desktop.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="css/errands.css" />
-    <script type="text/javascript" src="js/logic.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" href="css/portrait.css" />
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 769px)" href="css/desktop.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="css/errands.css" />
+  <script type="text/javascript" src="js/logic.js"></script>
 
-  <body>
-    <div
-      class="mainBody"
-      style="background-color: #ffffff; margin-bottom: 70px"
-    >
-      <div class="navbar" class="top_navbar" style="color: #ffffff">
-        <a style="color: white">45 mins Remaining</a>
-        <a></a>
-      </div>
-      <div class="wrapper">
-        <form id="search-bar">
-          <input
-            type="text"
-            id="search-query"
-            name="search-query"
-            placeholder="What would you like to do?"
-            style="height: 90px"
-          />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
 
-          <div class="wrapper-but">
-            <button
-              type="button"
-              class="btn btn-primary"
-              name="search"
-              onclick="cafePage()"
-              id="search-but"
-            >
-              Search
-            </button>
-          </div>
-        </form>
-      </div>
-      <h1 style="margin-left: 20px; margin-top: 10px">Our suggestions</h1>
-      <div class="card-deck">
-        <div class="card cards">
-          <a href="#" onclick="cafePage()" style="color: black">
-            <div class="card-body">
-              <h5 class="card-title">Cafe</h5>
-              <p class="card-text">
-                Do you wanna grab a cup of coffee from a nearby cafe?
-              </p>
-            </div>
-          </a>
+<body>
+  <div class="mainBody" style="background-color: #ffffff; margin-bottom: 70px;">
+    <div class="navbar" style="width: 100%; padding: 0 0 0 25% ;position: fixed; color: #fff; top: 0; height: 60px; text-align: center;">
+      
+      <a style="color: white; ">45 mins Remaining</a>
+      
+    </div>
+<br>
+<br>
+    <div class="wrapper">
+      <form id="search-bar">
+        <input type="text" id="search-query" name="search-query" placeholder="What would you like to do?"
+          style="height: 90px" />
+
+        <div class="wrapper-but">
+          <button type="button" class="btn btn-primary" name="search" onclick="cafePage()" id="search-but">
+            Search
+          </button>
         </div>
-        <div class="card cards">
+      </form>
+    </div>
+    <h1 style="margin-left: 20px; margin-top: 10px">Our suggestions</h1>
+    <div class="card-deck">
+      <div class="card cards">
+        <a href="#" onclick="cafePage()" style="color: black">
           <div class="card-body">
-            <h5 class="card-title">Gas station</h5>
+            <h5 class="card-title">Cafe</h5>
             <p class="card-text">
-              Would you be interested in filling fuel in your car?
+              Do you wanna grab a cup of coffee from a nearby cafe?
             </p>
           </div>
+        </a>
+      </div>
+      <div class="card cards">
+        <div class="card-body">
+          <h5 class="card-title">Gas station</h5>
+          <p class="card-text">
+            Would you be interested in filling fuel in your car?
+          </p>
         </div>
-        <div class="card cards">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a wider card with supporting text below as a natural
-              lead-in
-            </p>
-          </div>
+      </div>
+      <div class="card cards">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="navbar" style="position: fixed; bottom: 0">
-      <a href="status.html">Status</a>
-      <a style="color: white">45 mins Remaining</a>
-      <a></a>
-    </div>
-  </body>
+  <div class="navbar" style="position: fixed; left: 0; bottom: 0">
+    <a href="status.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+    </svg></a>
+  </div>
+</body>
+
 </html>
