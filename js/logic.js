@@ -10,9 +10,17 @@ let backErrandsPage = () => {
 }
 
 let cafePage = () => {
-    let query = document.getElementById('search-query').value
-    
-    window.location.href = "./search_result.html?query=" + query 
+    window.location.href = "./search_result.html?query=cafe"
+    console.log(query)
+}
+
+let gasPage = () => {
+    window.location.href = "./search_result.html?query=gas_station" 
+    console.log(query)
+}
+
+let libraryPage = () => {
+    window.location.href = "./search_result.html?query=library"
     console.log(query)
 }
 
