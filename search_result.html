@@ -7,8 +7,14 @@
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <script src="https://kit.fontawesome.com/31326c43bf.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/31326c43bf.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/logic.js"></script>
     <title>Virtual Q</title>
 
@@ -49,10 +55,20 @@
   </head>
 
   <body>
-    <div class="navbar" style="z-index: 1;width: 100%; padding: 0 0 0 25% ;position: fixed; color: #fff; top: 0; height: 60px; text-align: center;">
-      
-      <a style="color: white; ">45 mins Remaining</a>
-      
+    <div
+      class="navbar"
+      style="
+        z-index: 1;
+        width: 100%;
+        padding: 0 0 0 25%;
+        position: fixed;
+        color: #fff;
+        top: 0;
+        height: 60px;
+        text-align: center;
+      "
+    >
+      <a style="color: white">45 mins Remaining</a>
     </div>
     <!-- <div class="icon-wrapper">
       <a href="Errands.html"><i class="fa fa-home" id="home"></i></a>
@@ -61,7 +77,7 @@
     <div class="wrapper" style="margin-bottom: 100px">
       <div id="result-cards">
         <label id="query-results">Results</label>
-
+        <h5 id="search-query-display"></h5>
         <div class="result-card">
           <div class="row">
             <div class="col-2"></div>
@@ -115,10 +131,10 @@
           <div class="result-card">
             <div class="row">
               <div class="col-2"></div>
-            <div class="col-10" id="result4">
-              <h4 class="title"></h4>
-              <p class="description"></p>
-              <p class="address"></p>
+              <div class="col-10" id="result4">
+                <h4 class="title"></h4>
+                <p class="description"></p>
+                <p class="address"></p>
                 <div class="lds-roller"></div>
               </div>
             </div>
@@ -126,10 +142,10 @@
           <div class="result-card">
             <div class="row">
               <div class="col-2"></div>
-            <div class="col-10" id="result5">
-              <h4 class="title"></h4>
-              <p class="description"></p>
-              <p class="address"></p>
+              <div class="col-10" id="result5">
+                <h4 class="title"></h4>
+                <p class="description"></p>
+                <p class="address"></p>
                 <div class="lds-roller"></div>
               </div>
             </div>
@@ -137,10 +153,10 @@
           <div class="result-card">
             <div class="row">
               <div class="col-2"></div>
-            <div class="col-10" id="result6">
-              <h4 class="title"></h4>
-              <p class="description"></p>
-              <p class="address"></p>
+              <div class="col-10" id="result6">
+                <h4 class="title"></h4>
+                <p class="description"></p>
+                <p class="address"></p>
                 <div class="lds-roller"></div>
               </div>
             </div>
@@ -161,36 +177,57 @@
       </div>
     </div>
     <div class="navbar" style="position: fixed; left: 0; bottom: 0">
- 
       <a href="status.html"><i class="fa-solid fa-house"></i></a>
       <a href="Errands.html"><i class="fa-solid fa-magnifying-glass"></i></a>
-      <a data-toggle="modal" data-target="#Pop_Modal_Leave"><i class="bi bi-box-arrow-left fa-lg" style="color: white;"></i></a>
-
+      <a data-toggle="modal" data-target="#Pop_Modal_Leave"
+        ><i class="bi bi-box-arrow-left fa-lg" style="color: white"></i
+      ></a>
     </div>
-    <div class="modal fade" id="Pop_Modal_Leave" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Leave the Queue</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Are you sure you want to LEAVE the waiting room?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            No
-          </button>
-          <button type="button" class="btn btn-primary" name="search" id="search-but" onclick="loadHomePage()">
-            Yes
-          </button>
+    <div
+      class="modal fade"
+      id="Pop_Modal_Leave"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Leave the Queue</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to LEAVE the waiting room?
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              No
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              name="search"
+              id="search-but"
+              onclick="loadHomePage()"
+            >
+              Yes
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </body>
 </html>
 
@@ -202,7 +239,8 @@
   console.log(paramString);
   let keyword = paramString;
   let d = {};
-
+  document.getElementById("search-query-display").innerHTML =
+    "Results for " + keyword;
   var requestOptions = {
     method: "GET",
     headers: {
