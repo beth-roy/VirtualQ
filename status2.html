@@ -49,103 +49,7 @@
     ></script>
     <link rel="stylesheet" href="css/status.css" />
     <title>Status Page</title>
-<<<<<<< Updated upstream
-    <style>
-        /* From uiverse.io */
-button {
- position: relative;
- border: none;
- background: transparent;
- padding: 0;
- cursor: pointer;
- outline-offset: 4px;
- transition: filter 250ms;
- user-select: none;
- touch-action: manipulation;
-}
-
-.shadow {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- border-radius: 12px;
- background: hsl(0deg 0% 0% / 0.25);
- will-change: transform;
- transform: translateY(2px);
- transition: transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
-}
-
-.edge {
- position: absolute;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- border-radius: 12px;
- background: linear-gradient(
-    to left,
-    rgb(71, 118, 172) 0%,
-    rgb(66, 89, 139) 8%,
-    rgb(0, 84, 163) 92%,
-    rgb(0, 41, 82) 100%
-  );
-}
-
-.front {
- display: block;
- position: relative;
- padding: 12px 27px;
- border-radius: 12px;
- font-size: 1.1rem;
- color: white;
- background: rgb(0, 124, 240);
- will-change: transform;
- transform: translateY(-4px);
- transition: transform
-    600ms
-    cubic-bezier(.3, .7, .4, 1);
-}
-
-button:hover {
- filter: brightness(110%);
-}
-
-button:hover .front {
- transform: translateY(-6px);
- transition: transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-
-button:active .front {
- transform: translateY(-2px);
- transition: transform 34ms;
-}
-
-button:hover .shadow {
- transform: translateY(4px);
- transition: transform
-    250ms
-    cubic-bezier(.3, .7, .4, 1.5);
-}
-
-button:active .shadow {
- transform: translateY(1px);
- transition: transform 34ms;
-}
-
-button:focus:not(:focus-visible) {
- outline: none;
-}
-    </style>
-</head>
-=======
   </head>
->>>>>>> Stashed changes
 
   <body>
     <div
@@ -159,80 +63,14 @@ button:focus:not(:focus-visible) {
       </div>
     </div>
     <div>
-<<<<<<< Updated upstream
-        <div class="wrapper-but">
-            <h6>Approximate Waiting Time</h6>
-        </div>
-        <div class="wrapper-but">
-            <img src="images/progress_bar.png" alt="" width="200" height="200" />
-        </div>
-        <div class="wrapper-but">
-            <img src="images/queue.png" alt="" width="150" height="50" />
-        </div>
-        <div class="wrapper-but">
-            <button class="button" type="button" onclick="loadErrandsPage()" style="width: 50%;">
-                <span class="shadow"></span>
-                <span class="edge"></span>
-                <span class="front text"> 
-                
-                <div class="row">
-                    <div class="col-4">
-                        <div class="center">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-8" style="text-align: center">Run Errands</div>
-                </div>
-            </span>
-            </button>
-        </div>
-        
-        <div class="wrapper-but">
-            <button class="button" type="button" data-toggle="modal" data-target="#Pop_Modal_Modify" style="width: 50%;">
-                <span class="shadow"></span>
-                <span class="edge"></span>
-                <span class="front text">                 <div class="row">
-                    <div class="col-4">
-                        <div class="center">
-                            <i class="fa-solid fa-arrow-down"></i>
-                        </div>
-                    </div>
-
-                    <div class="col-8" style="text-align: center">Move Down</div>
-                </div>
-                </span>
-
-            </button>
-        </div>
-        <div class="wrapper-but">
-            <button class="button" type="button" data-toggle="modal" data-target="#Pop_Modal_Leave" style="width: 50%;">
-                <span class="shadow"></span>
-                <span class="edge"></span>
-                <span class="front text"> 
-                
-                <div class="row">
-                    <div class="col-4">
-                        <div class="center">
-                            <i class="fa-solid fa-xmark"></i>
-                        </div>
-                    </div>
-
-                    <div class="col-8" style="text-align: center">Leave Queue</div>
-                </div>
-                </span>
-            </button>
-        </div>
-=======
       <div class="wrapper-but">
         <h6>Approximate Waiting Time</h6>
       </div>
       <div class="wrapper-but">
-        <img src="images/1.png" alt="" width="200" height="200" />
+        <img src="images/2.png" alt="" width="200" height="200" />
       </div>
       <div class="wrapper-but">
-        <img src="images/queue1.png" alt="" width="300" height="100" />
+        <img src="images/queue2.png" alt="" width="300" height="100" />
       </div>
       <div class="wrapper-but">
         <button
@@ -290,7 +128,6 @@ button:focus:not(:focus-visible) {
           </div>
         </button>
       </div>
->>>>>>> Stashed changes
     </div>
 
     <!-- PopUp Modify -->
@@ -329,7 +166,7 @@ button:focus:not(:focus-visible) {
               class="btn btn-primary"
               name="search"
               id="search-but"
-              onclick="loadStatusPage2()"
+              onclick="loadStatusPage()"
             >
               Yes
             </button>

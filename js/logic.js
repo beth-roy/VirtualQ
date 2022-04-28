@@ -1,6 +1,9 @@
 let loadStatusPage =  () => {   
     window.location.href='./status.html'
 }
+let loadStatusPage2 =  () => {   
+    window.location.href='./status2.html'
+}
 let loadErrandsPage =  () => {   
     window.location.href='./Errands.html'
 }
