@@ -60,23 +60,26 @@
       style="
         z-index: 1;
         width: 100%;
-        padding: 0 0 0 25%;
+        padding: 0 0 0 ;
         position: fixed;
         color: #fff;
         top: 0;
         height: 60px;
-        text-align: center;
+       
       "
     >
+      <h3 id="results_tag" style="padding-left: 10%;"></h3>
+
       <a style="color: white">45 mins Remaining</a>
     </div>
     <!-- <div class="icon-wrapper">
       <a href="Errands.html"><i class="fa fa-home" id="home"></i></a>
       <i class="fa fa-question-circle" id="help"></i>
     </div> -->
-    <div class="wrapper" style="margin-bottom: 100px" style="">
+    <div class="wrapper" style="margin-bottom: 100px; margin-top: 50px;">
       <div id="result-cards">
-        <label id="query-results">Results</label>
+        
+        <h3 id="results_tag"></h3>
 
         <div class="result-card" st>
           
@@ -224,8 +227,11 @@
   let queryString = new URLSearchParams(paramString);
   console.log(paramString);
   let keyword = paramString;
+  var result_value = keyword
+  result_value = keyword.replace("_", " ")
   let d = {};
-
+  result_value = result_value.charAt(0).toUpperCase() + result_value.slice(1);
+  document.getElementById("results_tag").innerHTML = result_value;
   var requestOptions = {
     method: "GET",
     headers: {
@@ -286,6 +292,7 @@
 
   getEvents();
   document.getElementById("search-query-results").value = searchQuery;
+  
 
   $("#home").click(function () {
     window.location.href = "./index.html";
