@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -141,21 +142,24 @@
       style="text-align: center; padding-bottom: 10px"
     >
       <div class="container">
-        <h1 class="display-4">Rush Hospital</h1>
+        <h1 class="display-4">Room #432</h1>
         <h4>Dr. John Doe</h4>
-        <p class="lead">Room #432</p>
+        <p class="lead">Rush Hospital</p>
       </div>
     </div>
     <div>
-      <div class="wrapper-but">
-        <h6>Approximate Waiting Time</h6>
+      <div style="display: flex;justify-content: center; margin-bottom: 5px;">
+        <h6>You are <strong>4th</strong> in the queue</h6>
       </div>
-      <div class="wrapper-but">
+      <div style="display: flex;justify-content: center;">
+        <h6>Approx Waiting Time:</h6>
+      </div>
+      <div style="display: flex;justify-content: center;">
         <img src="images/1.png" alt="" width="200" height="200" />
       </div>
-      <div class="wrapper-but">
-        <img src="images/queue1.png" alt="" width="300" height="100" />
-      </div>
+      <!-- <div class="wrapper-but">
+        <img src="images/queue1.png" alt="" width="300" height="30" />
+      </div> -->
       <div class="wrapper-but">
         <button
           class="button"
@@ -217,7 +221,8 @@
             <div class="row">
               <div class="col-4">
                 <div class="center">
-                  <i class="fa-solid fa-xmark"></i>
+                  <i class="bi bi-box-arrow-left fa-lg"
+                  style="color: white"></i>
                 </div>
               </div>
 
@@ -225,6 +230,12 @@
             </div>
           </span>
         </button>
+      </div>
+      <div class="navbar" style="position: fixed; left: 0; bottom: 0">
+        <a href="status.html" width="25" height="25"><i class="fa-solid fa-house" style="color: #e1c21b"></i></a>
+        <a href="Errands.html"><i class="fa-solid fa-magnifying-glass" ></i></a>
+        <a data-toggle="modal" data-target="#Pop_Modal_Leave"><i class="bi bi-box-arrow-left fa-lg"
+            style="color: white"></i></a>
       </div>
     </div>
 

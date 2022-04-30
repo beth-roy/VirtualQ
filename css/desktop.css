@@ -81,7 +81,7 @@
     .wrapper-but{
         display: flex;
         justify-content: space-between;
-        margin-top: 20px;
+        
 
     }
 
@@ -101,7 +101,7 @@
     }
 
     .description{
-  		width: auto;
+  	width: auto;
       height: 4.5em;
       line-height: 1.5em;
   		text-overflow: ellipsis;
